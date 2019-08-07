@@ -1,0 +1,11 @@
+1) Create a new Subnet with ip address 10.1.5.0/24
+2) Create a NAT Gateway and select subnet 1(newly created one in step1)
+3) Create a new routing table named as NAT table, and add NAT subnet to it.
+4) Create Route towards NatGateway. So that all DB server traffic goes through NatGateway.
+5) Deploy VM1 in public subnet and VM2 in private subnet
+6) Verify connction to VM2 fails from outside.
+7) Should be able to connect from VM1
+8) Ping www.google.com from VM2 it should work. thanks to NAT Gateway.
+9) Prove data is going through NAT Gateway.
+
+
