@@ -1,0 +1,19 @@
+1) Create a VPC, name it as VPC_LAB1 with IP range 10.50.0.0/16
+
+2) Create Subnets as following
+    
+    Webservers: 10.50.1.0/24 us-east-1a
+    Appservers: 10.50.2.0/24 us-east-1b
+    Dbservers: 10.50.3.0/24  us-east-1c
+    
+    and enable Enable auto-assign public IPv4 address
+   
+3) Create a Interner Gateway & attach it to VPC 
+   We can associate one Gateway to One VPC.
+
+4) Use default routing table and add subnets to it.
+5) Configure a route so that VM's can communicate to outside world.
+6) Launch VM's in us-east-1a and us-east-1c AZ's and check communication.
+
+VPC is region specific:
+VPC is not AZ dependent, it can span accross all AZ's in a region. it depends on subnet.
